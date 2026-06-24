@@ -7,10 +7,13 @@ namespace SuperPhage
     {
         [SerializeField] private float moveSpeed = 5.0f;
         [SerializeField] private float rotationSpeed = 180.0f;
+        [SerializeField] private float deceleration = 5.0f;
+        private Rigidbody2D rb;
         private Vector2 currentDirection;
         private Vector2 goalDirection;
         private float currentAngle;
-        private Rigidbody2D rb;
+        private float currentSpeed;
+        private bool hasGoalDirection = false;
 
         private const float angleOffset = -90f;
 
@@ -22,24 +25,34 @@ namespace SuperPhage
 
         private void FixedUpdate()
         {
-            if (goalDirection.sqrMagnitude < 0.001) return;
-
-            float targetAngle = Mathf.Atan2(goalDirection.y, goalDirection.x) * Mathf.Rad2Deg;
-            currentAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+            if (hasGoalDirection)
+            {
+                float targetAngle = Mathf.Atan2(goalDirection.y, goalDirection.x) * Mathf.Rad2Deg;
+                currentAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+            }
 
             float currentRadian = currentAngle * Mathf.Deg2Rad;
             currentDirection.x = Mathf.Cos(currentRadian);
             currentDirection.y = Mathf.Sin(currentRadian);
 
-            Vector2 movePosition = rb.position + (currentDirection * moveSpeed * Time.fixedDeltaTime);
-
+            Vector2 movePosition = rb.position + (currentDirection * currentSpeed * Time.fixedDeltaTime);
+            
             rb.MovePosition(movePosition);
             rb.MoveRotation(currentAngle + angleOffset);
+
+            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, deceleration * Time.fixedDeltaTime);
         }
 
         public void SetGoalDirection(Vector2 dir)
         {
             goalDirection = dir;
+            currentSpeed = moveSpeed;
+            hasGoalDirection = true;
+        }
+
+        public void Brake()
+        {
+            hasGoalDirection = false;
         }
     }
 

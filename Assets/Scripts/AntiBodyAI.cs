@@ -5,7 +5,7 @@ namespace SuperPhage
 {
     public class AntiBodyAI : MonoBehaviour
     {
-        [SerializeField] private float detectDistance;
+        [SerializeField] private float detectDistance = 5.0f;
         [SerializeField] private Transform Target;
         [SerializeField] private SwimMotor swimMotor;
 
@@ -18,12 +18,11 @@ namespace SuperPhage
             if (isChasing)
             {
                 Vector2 directionToTarget = Target.position - transform.position;
-                // swimMotor.SetGoalDirection(directionToTarget.normalized);
-                // Debug.Log("Hello");
+                swimMotor.SetGoalDirection(directionToTarget.normalized);
             }
             else
             {
-                // swimMotor.SetGoalDirection(Vector2.zero);
+                swimMotor.Brake();
             }
         }
 
@@ -34,7 +33,6 @@ namespace SuperPhage
                 Vector3 offset = transform.position - Target.transform.position;
                 isChasing = offset.sqrMagnitude <= (detectDistance * detectDistance);
                 
-
                 yield return new WaitForSeconds(detectInterval);
             }
         }
