@@ -3,15 +3,29 @@ using UnityEngine.InputSystem;
 
 namespace SuperPhage
 {
+    [RequireComponent(typeof(SwimMotor))]
     public class PhageController : MonoBehaviour
     {
         [SerializeField] private InputActionReference moveActionRefence;
-        [SerializeField] private SwimMotor swimMotor;
+        private SwimMotor swimMotor;
+
+        private void Awake()
+        {
+            swimMotor = GetComponent<SwimMotor>();
+        }
 
         private void Update()
         {
             Vector2 moveDirection = moveActionRefence.action.ReadValue<Vector2>().normalized;
-            swimMotor.SetGoalDirection(moveDirection);
+            
+            if (moveDirection.sqrMagnitude > 0.001f)
+            {
+                swimMotor.SetGoalDirection(moveDirection);
+            }
+            else
+            {
+                swimMotor.Brake();
+            }
         }
 
         private void OnEnable()
