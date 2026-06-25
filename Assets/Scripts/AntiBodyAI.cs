@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace SuperPhage
 {
+    [RequireComponent(typeof(SwimMotor))]
     public class AntiBodyAI : MonoBehaviour
     {
         [SerializeField] private float detectDistance = 5.0f;
         [SerializeField] private Transform Target;
-        [SerializeField] private SwimMotor swimMotor;
-
+        private SwimMotor swimMotor;
         private Coroutine detectRutine;
         private float detectInterval = 0.5f;
         bool isChasing = false;
@@ -39,6 +39,7 @@ namespace SuperPhage
 
         private void OnEnable()
         {
+            swimMotor = GetComponent<SwimMotor>();
             detectRutine = StartCoroutine(DetectPhage());
         }
 
