@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 namespace SuperPhage
 {
@@ -7,6 +6,7 @@ namespace SuperPhage
     {
         [SerializeField] private float offset = 0.2f;
         [SerializeField] private float speed = 4f;
+        [SerializeField] private float energyAmount = 5f;
         private Transform target;
         private bool isAttracted = false;
         
@@ -22,7 +22,7 @@ namespace SuperPhage
             float sqrDist = (target.position - transform.position).sqrMagnitude;
             if (sqrDist < offset * offset)
             {
-                Debug.Log("범위 내에 접촉");
+                target.GetComponent<PhageEnergy>().GainEnergy(energyAmount);
                 Destroy(this.gameObject);
             }
         }

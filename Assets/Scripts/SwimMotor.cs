@@ -54,6 +54,15 @@ namespace SuperPhage
         {
             hasGoalDirection = false;
         }
+
+        /// <summary>
+        /// If speed is under 0, set moveSpeed to 0
+        /// </summary>
+        /// <param name="speed"></param>
+        public void SetMoveSpeed(float speed)
+        {
+            moveSpeed = Mathf.Max(0f, speed);
+        }
     }
 
 }
