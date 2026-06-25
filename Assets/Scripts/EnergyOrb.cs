@@ -9,12 +9,13 @@ namespace SuperPhage
         [SerializeField] private float energyAmount = 5f;
         private Transform target;
         private bool isAttracted = false;
-        
+        private PhageEnergy phageEnergy;
+
         private const string PLAYER_TAG = "Player";
 
         private void Update()
         {
-            if (!isAttracted || target == null) return;
+            if (isAttracted == false || target == null) return;
 
             transform.position = Vector2.MoveTowards(
                 transform.position, target.position, speed * Time.deltaTime);
@@ -22,7 +23,7 @@ namespace SuperPhage
             float sqrDist = (target.position - transform.position).sqrMagnitude;
             if (sqrDist < offset * offset)
             {
-                target.GetComponent<PhageEnergy>().GainEnergy(energyAmount);
+                phageEnergy.GainEnergy(energyAmount);
                 Destroy(this.gameObject);
             }
         }
@@ -32,6 +33,7 @@ namespace SuperPhage
             if (collision.gameObject.CompareTag(PLAYER_TAG))
             {
                 target = collision.gameObject.GetComponent<Transform>();
+                phageEnergy = target.GetComponent<PhageEnergy>();
                 isAttracted = true;
             }
         }

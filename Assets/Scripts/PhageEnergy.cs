@@ -25,7 +25,7 @@ namespace SuperPhage
 
         private void Update()
         {
-            Debug.Log($"currentEnergy : {currentEnergy}");
+            // Debug.Log($"currentEnergy : {currentEnergy}");
 
             currentEnergy = Mathf.Clamp(currentEnergy - energyUse * Time.deltaTime, 0f, maxEnergy);
             UpdateEnergyState();
