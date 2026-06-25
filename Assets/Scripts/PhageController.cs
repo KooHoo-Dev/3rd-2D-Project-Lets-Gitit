@@ -3,16 +3,11 @@ using UnityEngine.InputSystem;
 
 namespace SuperPhage
 {
-    [RequireComponent(typeof(SwimMotor))]
     public class PhageController : MonoBehaviour
     {
         [SerializeField] private InputActionReference moveActionRefence;
-        private SwimMotor swimMotor;
-
-        private void Awake()
-        {
-            swimMotor = GetComponent<SwimMotor>();
-        }
+        [SerializeField] private SwimMotor swimMotor;
+        
 
         private void Update()
         {
