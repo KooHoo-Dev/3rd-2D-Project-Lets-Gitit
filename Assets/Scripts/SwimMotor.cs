@@ -45,7 +45,7 @@ namespace SuperPhage
 
         public void SetGoalDirection(Vector2 dir)
         {
-            goalDirection = dir;
+            goalDirection = dir.normalized;
             currentSpeed = moveSpeed;
             hasGoalDirection = true;
         }
