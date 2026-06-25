@@ -143,3 +143,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.EnergyOrb
   offset: 0.2
   speed: 4
+  energyAmount: 5
