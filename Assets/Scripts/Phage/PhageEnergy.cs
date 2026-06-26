@@ -1,0 +1,76 @@
+using UnityEngine;
+
+namespace SuperPhage
+{
+    public enum EnergyStage
+    {
+        High,
+        Medium,
+        Low
+    }
+
+    [RequireComponent(typeof(SwimMotor))]
+    public class PhageEnergy : MonoBehaviour
+    {
+        [SerializeField] private float energyUse = 1f;
+        private SwimMotor swimMotor;
+        private float maxEnergy = 100f;
+        private float currentEnergy = 100f;
+        private EnergyStage currentStage = EnergyStage.High;
+
+        private void Awake()
+        {
+            swimMotor = GetComponent<SwimMotor>();
+        }
+
+        private void Update()
+        {
+            // Debug.Log($"currentEnergy : {currentEnergy}");
+
+            currentEnergy = Mathf.Clamp(currentEnergy - energyUse * Time.deltaTime, 0f, maxEnergy);
+            UpdateEnergyState();
+        }
+
+        private void UpdateEnergyState()
+        {
+            EnergyStage nextStage = EvaluateEnergyStage();
+
+            if (currentStage == nextStage) return;
+
+            currentStage = nextStage;
+
+            switch (currentStage)
+            {
+                case EnergyStage.High:
+                    swimMotor.SetMoveSpeed(5f);
+                    break;
+                case EnergyStage.Medium:
+                    swimMotor.SetMoveSpeed(4f);
+                    break;
+                case EnergyStage.Low:
+                    swimMotor.SetMoveSpeed(3f);
+                    break;
+            }
+        }
+
+        private EnergyStage EvaluateEnergyStage()
+        {
+            if (currentEnergy > 40)
+            {
+                return EnergyStage.High; 
+            }
+            else if (currentEnergy > 20)
+            {
+                return EnergyStage.Medium;
+            }
+
+            return EnergyStage.Low;
+        }
+
+        public void GainEnergy(float energyAmount)
+        {
+            currentEnergy += energyAmount;
+        }
+    }
+
+}
