@@ -5,7 +5,7 @@ namespace SuperPhage
     public class EnergyOrb : MonoBehaviour
     {
         [SerializeField] private float offset = 0.2f;
-        [SerializeField] private float speed = 4f;
+        [SerializeField] private float speed = 6f;
         [SerializeField] private float energyAmount = 5f;
         private Transform target;
         private bool isAttracted = false;
