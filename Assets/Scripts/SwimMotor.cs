@@ -34,7 +34,7 @@ namespace SuperPhage
                 Vector2 targetHeadDirection = isBackwardMove ? -goalDirection : goalDirection;
 
                 float targetAngle = Mathf.Atan2(goalDirection.y, goalDirection.x) * Mathf.Rad2Deg;
-                currentAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+                currentAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, currentRotationSpeed * Time.fixedDeltaTime);
             }
 
             float currentRadian = currentAngle * Mathf.Deg2Rad;
