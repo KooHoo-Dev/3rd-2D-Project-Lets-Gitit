@@ -7,6 +7,7 @@ namespace SuperPhage
     public class PhageController : MonoBehaviour
     {
         [SerializeField] private InputActionReference moveActionRefence;
+        [SerializeField] private InputActionReference backwardActionRefence;
         private SwimMotor swimMotor;
 
         private void Awake()
@@ -18,24 +19,26 @@ namespace SuperPhage
         {
             Vector2 moveDirection = moveActionRefence.action.ReadValue<Vector2>().normalized;
             
-            if (moveDirection.sqrMagnitude > 0.001f)
-            {
-                swimMotor.SetGoalDirection(moveDirection);
-            }
-            else
+            if (moveDirection.sqrMagnitude <= 0.001f)
             {
                 swimMotor.Brake();
+                return;
             }
+
+            bool isBackward = backwardActionRefence.action.IsPressed();
+            swimMotor.SetGoalDirection(moveDirection, isBackward);
         }
 
         private void OnEnable()
         {
             moveActionRefence.action.Enable();
+            backwardActionRefence.action.Enable();
         }
 
         private void OnDisable()
         {
             moveActionRefence.action.Disable();
+            backwardActionRefence.action.Disable();
         }
     }
 }
