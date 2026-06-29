@@ -3641,7 +3641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4b1bdf341ba724bbc5556a793a6ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Receptor
-  target: {fileID: 0}
+  requiredStayTime: 3
 --- !u!4 &1945844600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5045136714227892312, guid: 5db33e785656f3446819c5841aab2162, type: 3}
