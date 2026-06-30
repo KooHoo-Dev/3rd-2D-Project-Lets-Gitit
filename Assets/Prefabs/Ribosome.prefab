@@ -133,6 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6493632722665844458}
+  - component: {fileID: 7304964561719493831}
   m_Layer: 0
   m_Name: Ribosome
   m_TagString: Untagged
@@ -156,6 +157,32 @@ Transform:
   - {fileID: 5589491570119935313}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7304964561719493831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602474407467630987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85825ad8c85785b4b9511272480beeb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.Ribosome
+  emitPrefabs: []
+  emitPoint: {fileID: 0}
+  emitSpeed: 3
+  emitDuration: 1
+  maxEntities: 10
+  PhagePrefab: {fileID: 4002249867606524216, guid: 92edae218a3859c42a9ab426dd47a810, type: 3}
+  NucleasePrefab: {fileID: 8668290320580041454, guid: 718aeea1ddaf3b741b9b75d643d772ca, type: 3}
+  ProduceInterval: 3
+  RequiredAminoAcidForNuclease: 3
+  RequiredAminoAcidForPhage: 3
+  RequiredAGTCForPhage: 3
+  <aminoAcidCount>k__BackingField: 0
+  <AGTCCount>k__BackingField: 0
+  FactoryType: 0
 --- !u!1 &8322495617741115352
 GameObject:
   m_ObjectHideFlags: 0
