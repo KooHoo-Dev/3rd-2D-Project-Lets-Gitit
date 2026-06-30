@@ -5,6 +5,7 @@ namespace SuperPhage
 {
     public class MicroEntityEmitter : MonoBehaviour
     {
+        [Header("MicroEntity/Settings")]
         [SerializeField] private GameObject[] emitPrefabs;
         [SerializeField] private Transform emitPoint;
         [SerializeField] private float emitSpeed = 3.0f;
@@ -21,7 +22,7 @@ namespace SuperPhage
             Emit(emitPrefabs[randIdx]);
         }
 
-        private void Emit(GameObject prefab)
+        protected void Emit(GameObject prefab)
         {
             if (prefab == null) return;
 
