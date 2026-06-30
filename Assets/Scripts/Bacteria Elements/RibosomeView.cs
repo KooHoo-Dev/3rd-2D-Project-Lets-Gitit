@@ -9,6 +9,16 @@ namespace SuperPhage
         [SerializeField] private GameObject AminoAmount;
         [SerializeField] private GameObject AGTCAmount;
 
+        [SerializeField] private SpriteRenderer GaugeFill;
+        [SerializeField] private TMP_Text AminoText;
+        [SerializeField] private TMP_Text AGTCText;
+
+        public void RefreshMaterial(int Amino, int AGTC)
+        {
+            AminoText.text = $"X {Amino}";
+            AGTCText.text = $"X {AGTC}";
+        }
+
         public void PhageFactoryView()
         {
             EraseView();

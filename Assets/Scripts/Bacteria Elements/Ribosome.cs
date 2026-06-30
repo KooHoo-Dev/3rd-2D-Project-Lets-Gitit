@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -87,6 +85,7 @@ namespace SuperPhage
             if (FactoryType == RibosomeFactoryType.Nuclease)
             {
                 aminoAcidCount -= RequiredAminoAcidForNuclease;
+                view.RefreshMaterial(aminoAcidCount, AGTCCount);
                 base.Emit(NucleasePrefab);
             }
 
@@ -94,6 +93,7 @@ namespace SuperPhage
             {
                 aminoAcidCount -= RequiredAminoAcidForPhage;
                 AGTCCount -= RequiredAGTCForPhage;
+                view.RefreshMaterial(aminoAcidCount, AGTCCount);
                 base.Emit(PhagePrefab);
             }
         }
