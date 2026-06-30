@@ -611,11 +611,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8276849847781710760, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1746103682}
+    - targetCorrespondingSourceObject: {fileID: 3407920345184690362, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5131461276509670753, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
 --- !u!4 &1746103680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6493632722665844458, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+  m_PrefabInstance: {fileID: 1746103679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1746103681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8276849847781710760, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+  m_PrefabInstance: {fileID: 1746103679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1746103682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746103681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205e3618459aa624f811c87b32d33dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.RibosomeView
+  GaugeFill: {fileID: 1746103685}
+  AminoAMount: {fileID: 1746103684}
+  AGTCAmount: {fileID: 1746103683}
+--- !u!1 &1746103683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 737319717418128155, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+  m_PrefabInstance: {fileID: 1746103679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1746103684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 704428711910723722, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+  m_PrefabInstance: {fileID: 1746103679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1746103685 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5023717577113415071, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
   m_PrefabInstance: {fileID: 1746103679}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1780383977
