@@ -23,7 +23,6 @@ namespace SuperPhage
         [SerializeField] private int RequiredAGTCForPhage = 3;
         [SerializeField] private SpriteRenderer mRNA;
         
-
         // serialize for debugging
         [field: SerializeField] public int aminoAcidCount { get; private set; } = 0;
         [field: SerializeField] public int AGTCCount { get; private set; } = 0;
@@ -47,7 +46,7 @@ namespace SuperPhage
                 SelectType(RibosomeFactoryType.None);
             }
         }
-
+        
         private void Update()
         {
             SelectFactoryTypeForDebugging();
@@ -56,10 +55,12 @@ namespace SuperPhage
             if (CanProduce() == false) return;
 
             produceTimer += Time.deltaTime;
+            view.RefreshGauge(produceTimer / ProduceInterval);
 
             if (produceTimer >= ProduceInterval)
             {
                 produceTimer = 0f;
+                view.RefreshGauge(0f);
                 Produce();
             }
         }
@@ -121,6 +122,7 @@ namespace SuperPhage
                 view.EraseView();
             }
         }
+
     }
 }
 

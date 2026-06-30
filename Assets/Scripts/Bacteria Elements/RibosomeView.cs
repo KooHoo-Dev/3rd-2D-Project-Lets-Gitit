@@ -13,10 +13,31 @@ namespace SuperPhage
         [SerializeField] private TMP_Text AminoText;
         [SerializeField] private TMP_Text AGTCText;
 
+        [SerializeField] private Transform gaugeFillPivot;
+        private Vector3 fullGaugeScale;
+
+        private void Awake()
+        {
+            fullGaugeScale = gaugeFillPivot.localScale;
+            RefreshGauge(0f);
+            EraseView();
+        }
+
         public void RefreshMaterial(int Amino, int AGTC)
         {
             AminoText.text = $"X {Amino}";
             AGTCText.text = $"X {AGTC}";
+        }
+
+        public void RefreshGauge(float progress) 
+        {
+            float clampedProgress = Mathf.Clamp01(progress);
+
+            gaugeFillPivot.localScale = new Vector3(
+                fullGaugeScale.x * clampedProgress,
+                fullGaugeScale.y,
+                fullGaugeScale.z
+            );
         }
 
         public void PhageFactoryView()

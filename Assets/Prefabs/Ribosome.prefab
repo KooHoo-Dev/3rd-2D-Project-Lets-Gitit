@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &98180212409193076
 Transform:
   m_ObjectHideFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6368219170200216710
 Transform:
   m_ObjectHideFlags: 0
@@ -733,7 +733,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 719287640998975271}
+  m_Father: {fileID: 1685346863393091074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5023717577113415071
 SpriteRenderer:
@@ -782,7 +782,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 3cf9328926c1e4b468bc628f058f6799, type: 3}
   m_Color: {r: 0, g: 1, b: 0.25349808, a: 1}
@@ -856,6 +856,38 @@ MonoBehaviour:
   <AGTCCount>k__BackingField: 0
   FactoryType: 0
   view: {fileID: 521095431125877793}
+--- !u!1 &8175489542540284163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1685346863393091074}
+  m_Layer: 0
+  m_Name: GaugeFillPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685346863393091074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8175489542540284163}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 736452528426920333}
+  m_Father: {fileID: 719287640998975271}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8276849847781710760
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +940,7 @@ MonoBehaviour:
   GaugeFill: {fileID: 5023717577113415071}
   AminoText: {fileID: 1721250194813771973}
   AGTCText: {fileID: 5378874018845549643}
+  gaugeFillPivot: {fileID: 1685346863393091074}
 --- !u!1 &8322495617741115352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &719287640998975271
 Transform:
   m_ObjectHideFlags: 0
@@ -1119,7 +1152,7 @@ Transform:
   m_LocalScale: {x: 0.225, y: 0.033, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 736452528426920333}
   - {fileID: 6743191954911575649}
+  - {fileID: 1685346863393091074}
   m_Father: {fileID: 425501746038603699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
