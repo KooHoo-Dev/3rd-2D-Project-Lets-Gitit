@@ -35,15 +35,15 @@ namespace SuperPhage
         {
             if (Keyboard.current.digit1Key.wasPressedThisFrame)
             {
-                SelectType(RibosomeFactoryType.Phage);
+                SelectFactoryType(RibosomeFactoryType.Phage);
             }
             if (Keyboard.current.digit2Key.wasPressedThisFrame)
             {
-                SelectType(RibosomeFactoryType.Nuclease);
+                SelectFactoryType(RibosomeFactoryType.Nuclease);
             }
             if (Keyboard.current.digit3Key.wasPressedThisFrame)
             {
-                SelectType(RibosomeFactoryType.None);
+                SelectFactoryType(RibosomeFactoryType.None);
             }
         }
         
@@ -86,7 +86,7 @@ namespace SuperPhage
             if (FactoryType == RibosomeFactoryType.Nuclease)
             {
                 aminoAcidCount -= RequiredAminoAcidForNuclease;
-                view.RefreshMaterial(aminoAcidCount, AGTCCount);
+                view.RefreshAminoCount(aminoAcidCount);
                 base.Emit(NucleasePrefab);
             }
 
@@ -94,12 +94,13 @@ namespace SuperPhage
             {
                 aminoAcidCount -= RequiredAminoAcidForPhage;
                 AGTCCount -= RequiredAGTCForPhage;
-                view.RefreshMaterial(aminoAcidCount, AGTCCount);
+                view.RefreshAminoCount(aminoAcidCount);
+                view.RefreshAGTCCount(AGTCCount);
                 base.Emit(PhagePrefab);
             }
         }
 
-        public void SelectType(RibosomeFactoryType type)
+        public void SelectFactoryType(RibosomeFactoryType type)
         {
             if (type == RibosomeFactoryType.Nuclease)
             {
@@ -123,6 +124,17 @@ namespace SuperPhage
             }
         }
 
+        public void AddAminoAcid()
+        {
+            aminoAcidCount += 1;
+            view.RefreshAminoCount(aminoAcidCount);
+        }
+
+        public void AddAGTC()
+        {
+            AGTCCount += 1;
+            view.RefreshAGTCCount(AGTCCount);
+        }
     }
 }
 
