@@ -2,15 +2,11 @@ using SuperPhage;
 using System.Collections;
 using UnityEngine;
 
-public class EmitTest : MonoBehaviour
+public class RNAPolymearse : MicroEntityEmitter
 {
-    MicroEntityEmitter emitter;
+    [Header("RNAPolymearse/Prefabs")]
+    [SerializeField] private GameObject[] mRNAPrefabs;
     private WaitForSeconds waitTime = new WaitForSeconds(2f);
-
-    private void Awake()
-    {
-        emitter = GetComponent<MicroEntityEmitter>();
-    }
 
     private void Start()
     {
@@ -21,8 +17,9 @@ public class EmitTest : MonoBehaviour
     {
         while (true) 
         {
-            emitter.EmitRandom();
-
+            int randIdx = Random.Range(0, mRNAPrefabs.Length);
+            Emit(mRNAPrefabs[randIdx]);
+            
             yield return waitTime;
         }
     }

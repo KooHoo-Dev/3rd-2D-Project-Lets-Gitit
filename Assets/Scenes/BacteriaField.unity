@@ -306,7 +306,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 705055112}
-  - component: {fileID: 705055113}
   - component: {fileID: 705055114}
   m_Layer: 0
   m_Name: RNAPolymearse
@@ -331,25 +330,6 @@ Transform:
   - {fileID: 905871461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &705055113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705055111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 879cc9a203aa81748951a4896707824b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.MicroEntityEmitter
-  emitPrefabs:
-  - {fileID: 1716689590524615816, guid: 2219cd2a9c0576c469db9b89a95b8d25, type: 3}
-  - {fileID: 1904490473772546365, guid: e5897fd99577b9f4cabf04e34f892016, type: 3}
-  emitPoint: {fileID: 705055112}
-  emitSpeed: 3
-  emitDuration: 1
-  maxEntities: 10
 --- !u!114 &705055114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcbdc75b44822b4da1084f78baef87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::test
+  emitPoint: {fileID: 705055112}
+  emitSpeed: 3
+  emitDuration: 1
+  maxEntities: 10
+  mRNAPrefabs:
+  - {fileID: 1716689590524615816, guid: 2219cd2a9c0576c469db9b89a95b8d25, type: 3}
+  - {fileID: 1904490473772546365, guid: e5897fd99577b9f4cabf04e34f892016, type: 3}
 --- !u!1 &905871460
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,8 +738,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830935894}
-  - component: {fileID: 1830935896}
   - component: {fileID: 1830935895}
+  - component: {fileID: 1830935896}
   m_Layer: 0
   m_Name: Nucleoid
   m_TagString: Untagged
@@ -788,6 +775,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcbdc75b44822b4da1084f78baef87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmitTest
+  emitPoint: {fileID: 0}
+  emitSpeed: 3
+  emitDuration: 1
+  maxEntities: 10
+  mRNAPrefabs: []
 --- !u!114 &1830935896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,14 +789,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1830935893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 879cc9a203aa81748951a4896707824b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1eb34389278f78f42806c9fb9a754165, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.MicroEntityEmitter
-  emitPrefabs: []
-  emitPoint: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.Nucleoid
+  emitPoint: {fileID: 1830935894}
   emitSpeed: 3
   emitDuration: 1
   maxEntities: 10
+  AGTCPrefab: {fileID: 1676282199240158610, guid: 0bc5f5332b03af54299459d3b5cb63a3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
