@@ -738,7 +738,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830935894}
-  - component: {fileID: 1830935895}
   - component: {fileID: 1830935896}
   m_Layer: 0
   m_Name: Nucleoid
@@ -763,23 +762,6 @@ Transform:
   - {fileID: 1780383978}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13}
---- !u!114 &1830935895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830935893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fcbdc75b44822b4da1084f78baef87e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EmitTest
-  emitPoint: {fileID: 0}
-  emitSpeed: 3
-  emitDuration: 1
-  maxEntities: 10
-  mRNAPrefabs: []
 --- !u!114 &1830935896
 MonoBehaviour:
   m_ObjectHideFlags: 0
