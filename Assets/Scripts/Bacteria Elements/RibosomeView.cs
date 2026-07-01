@@ -23,9 +23,13 @@ namespace SuperPhage
             EraseView();
         }
 
-        public void RefreshMaterial(int Amino, int AGTC)
+        public void RefreshAminoCount(int Amino)
         {
             AminoText.text = $"X {Amino}";
+        }
+
+        public void RefreshAGTCCount(int AGTC)
+        {
             AGTCText.text = $"X {AGTC}";
         }
 

@@ -2,16 +2,19 @@ using UnityEngine;
 
 namespace SuperPhage
 {
+    public enum EntityType
+    {
+        AminoAcid,
+        AGTC,
+        mRNA_Phage,
+        mRNA_Nuclease
+    }
+
     public class MicroEntity : MonoBehaviour
     {
-        [SerializeField] private float lifeTime = 10f;
+        [field: SerializeField] public EntityType entityType { get; private set; }
         private MicroEntityEmitter emitter;
-
-        private void OnEnable()
-        {
-            Destroy(gameObject, lifeTime);
-        }
-
+        
         public void Init(MicroEntityEmitter emitter)
         {
             this.emitter = emitter;
@@ -19,8 +22,12 @@ namespace SuperPhage
 
         private void OnDestroy()
         {
+            if (emitter == null)
+            {
+                return;
+            }
+
             emitter.DecreaseCount();
         }
     }
-
 }

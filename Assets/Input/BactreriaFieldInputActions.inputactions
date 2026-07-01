@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "BactreriaFieldInputActions",
+    "maps": [
+        {
+            "name": "FieldDrag",
+            "id": "7ba281c1-284f-4082-a00d-32d9b34afdd1",
+            "actions": [
+                {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "1cb08dda-448a-4c47-a2c4-d28f87e71606",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "1561cf7a-2d3b-46ce-8319-98a307083d02",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "521b966e-214e-4af5-96e3-5edb326f8fb9",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e140522e-13a4-49ad-8129-4eedd3b94531",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
