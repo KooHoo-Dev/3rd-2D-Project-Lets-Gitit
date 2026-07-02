@@ -1219,7 +1219,7 @@ GameObject:
   - component: {fileID: 790621465}
   - component: {fileID: 790621466}
   m_Layer: 0
-  m_Name: NulceoidContext
+  m_Name: NucleoidContext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -19,7 +19,7 @@ namespace SuperPhage
         public override void Init(MicroEntityEmitter emitter)
         {
             base.Init(emitter);
-            target = NulceoidContext.Instance.nucleoid;
+            target = NucleoidContext.Instance.nucleoid;
         }
 
         private void Update()
