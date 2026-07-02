@@ -6,32 +6,34 @@ namespace SuperPhage
     public class MicroEntityEmitter : MonoBehaviour
     {
         [Header("MicroEntity/Settings")]
-        [SerializeField] private GameObject[] emitPrefabs;
         [SerializeField] private Transform emitPoint;
         [SerializeField] private float emitSpeed = 3.0f;
         [SerializeField] private float emitDuration = 1.0f;
         [SerializeField] private int maxEntities = 10;
         private int currentEntities = 0;
 
-        public void EmitRandom()
-        {
-            if (emitPrefabs == null || emitPrefabs.Length == 0) return;
-            if (currentEntities >= maxEntities) return;
-
-            int randIdx = Random.Range(0, emitPrefabs.Length);
-            Emit(emitPrefabs[randIdx]);
-        }
-
         protected void Emit(GameObject prefab)
         {
+            Emit(prefab, GetEmitDirection());
+        }
+
+        protected void Emit(GameObject prefab, Vector2 direction)
+        {
             if (prefab == null) return;
+            if (currentEntities >= maxEntities) return;
 
             GameObject spawnedObject = Instantiate(prefab, emitPoint.position, Quaternion.identity);
+            
             MicroEntity entity = spawnedObject.GetComponent<MicroEntity>();
             entity.Init(this);
+
             currentEntities += 1;
 
-            Vector2 emitDirection = GetEmitDirection();
+            // Emit(prefab, Vector2.zero)같이 호출하는 경우를 방지
+            Vector2 emitDirection = direction.sqrMagnitude > 0f
+                ? direction.normalized
+                : GetEmitDirection();
+
             StartCoroutine(Eject(spawnedObject.transform, emitDirection));
         }
 
@@ -61,6 +63,11 @@ namespace SuperPhage
 
                 yield return null;
             }
+        }
+
+        protected void SetEmitPoint(Vector3 position)
+        {
+            emitPoint.position = position;
         }
 
         public void DecreaseCount()

@@ -31,26 +31,8 @@ namespace SuperPhage
         [SerializeField] private RibosomeFactoryType FactoryType = RibosomeFactoryType.None;
         [SerializeField] private RibosomeView view;
 
-        private void SelectFactoryTypeForDebugging()
-        {
-            if (Keyboard.current.digit1Key.wasPressedThisFrame)
-            {
-                SelectFactoryType(RibosomeFactoryType.Phage);
-            }
-            if (Keyboard.current.digit2Key.wasPressedThisFrame)
-            {
-                SelectFactoryType(RibosomeFactoryType.Nuclease);
-            }
-            if (Keyboard.current.digit3Key.wasPressedThisFrame)
-            {
-                SelectFactoryType(RibosomeFactoryType.None);
-            }
-        }
-        
         private void Update()
         {
-            SelectFactoryTypeForDebugging();
-
             if (FactoryType == RibosomeFactoryType.None) return;
             if (CanProduce() == false) return;
 

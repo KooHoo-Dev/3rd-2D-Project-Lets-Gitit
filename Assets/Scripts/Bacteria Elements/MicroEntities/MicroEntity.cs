@@ -7,7 +7,9 @@ namespace SuperPhage
         AminoAcid,
         AGTC,
         mRNA_Phage,
-        mRNA_Nuclease
+        mRNA_Nuclease,
+        PhageAI,
+        Nuclease
     }
 
     public class MicroEntity : MonoBehaviour
@@ -15,7 +17,7 @@ namespace SuperPhage
         [field: SerializeField] public EntityType entityType { get; private set; }
         private MicroEntityEmitter emitter;
         
-        public void Init(MicroEntityEmitter emitter)
+        public virtual void Init(MicroEntityEmitter emitter)
         {
             this.emitter = emitter;
         }
