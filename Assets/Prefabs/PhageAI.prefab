@@ -349,6 +349,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7419315206889018762}
   - component: {fileID: -6739802694047424976}
+  - component: {fileID: -4081092172949004019}
+  - component: {fileID: -4839977739223769927}
   m_Layer: 0
   m_Name: PhageAI
   m_TagString: Untagged
@@ -384,7 +386,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b444ef66bec2443a26a34bb027392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.PhageAI
-  lifeTime: 10
+  <entityType>k__BackingField: 4
+--- !u!50 &-4081092172949004019
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002249867606524216}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-4839977739223769927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002249867606524216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4f71485cc1f524b86b1df4385f8122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.SwimMotor
+  moveSpeed: 5
+  rotationSpeed: 180
+  backwardMoveSpeed: 2
+  backwardRotationSpeed: 50
+  deceleration: 5
 --- !u!1 &4068082443117412227
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ namespace SuperPhage
             if (currentEntities >= maxEntities) return;
 
             GameObject spawnedObject = Instantiate(prefab, emitPoint.position, Quaternion.identity);
-
+            
             MicroEntity entity = spawnedObject.GetComponent<MicroEntity>();
             entity.Init(this);
 
@@ -63,6 +63,11 @@ namespace SuperPhage
 
                 yield return null;
             }
+        }
+
+        protected void SetEmitPoint(Vector3 position)
+        {
+            emitPoint.position = position;
         }
 
         public void DecreaseCount()

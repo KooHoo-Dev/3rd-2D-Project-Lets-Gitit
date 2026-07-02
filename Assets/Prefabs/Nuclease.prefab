@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 2623365161480411390}
   - component: {fileID: 700903382758925592}
   - component: {fileID: -7475841357030784044}
+  - component: {fileID: 7784762934992680550}
   m_Layer: 0
   m_Name: Nuclease
   m_TagString: Untagged
@@ -170,7 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bdbf64ad2e64d46bee4892815156df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.Nuclease
-  <entityType>k__BackingField: 0
+  <entityType>k__BackingField: 5
+  target: {fileID: 0}
+  deComposeDelay: 2
 --- !u!50 &700903382758925592
 Rigidbody2D:
   serializedVersion: 5
@@ -186,7 +189,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -210,8 +213,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4f71485cc1f524b86b1df4385f8122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.SwimMotor
-  moveSpeed: 5
+  moveSpeed: 3
   rotationSpeed: 180
   backwardMoveSpeed: 2
   backwardRotationSpeed: 50
   deceleration: 5
+--- !u!60 &7784762934992680550
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668290320580041454}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.23017442, y: 0.8225883}
+      - {x: -0.22530983, y: -0.1317121}
+      - {x: -0.0010927087, y: -0.46102628}
+      - {x: 0.22175105, y: -0.134946}
+      - {x: 0.22419, y: 0.8249273}
+  m_UseDelaunayMesh: 1
