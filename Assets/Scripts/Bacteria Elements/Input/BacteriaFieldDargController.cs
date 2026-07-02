@@ -13,7 +13,6 @@ namespace SuperPhage
         [SerializeField] private LayerMask dropTargetLayer;
 
         private MicroEntity currentEntity;
-        private Vector3 dragOffset;
 
         private void Update()
         {
@@ -43,8 +42,6 @@ namespace SuperPhage
             if (hit.TryGetComponent(out MicroEntity entity) == false) return;
         
             currentEntity = entity;
-
-            dragOffset = entity.transform.position - pointerWorldPosition;
         }
 
         private void FollowPointer()

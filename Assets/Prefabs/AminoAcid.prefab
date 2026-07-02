@@ -111,7 +111,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5830000215696393119, guid: 7643793887b41ba42acd8d0443f1f23a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a662684575919f54ca83905459bb7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.MicroEntity
-  lifeTime: 10
   <entityType>k__BackingField: 0
 --- !u!61 &2186554630143561015
 BoxCollider2D:

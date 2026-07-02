@@ -30,6 +30,11 @@ namespace SuperPhage
             }
 
             emitter.DecreaseCount();
+
+            if (RandomAreaSpawner.Instance != null)
+            {
+                RandomAreaSpawner.Instance.DecreaseCount();
+            }
         }
     }
 }
