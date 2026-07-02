@@ -2071,6 +2071,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+--- !u!1 &2005246123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005246124}
+  - component: {fileID: 2005246125}
+  m_Layer: 0
+  m_Name: AminoAcidSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005246124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005246123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.57677, y: 4.04704, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2005246125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005246123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dce5f05b87c5604580fc70d4a5f2cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.RandomAreaSpawner
+  SpawnObject: {fileID: 7633774589275899445, guid: 9a617e9efe6a9504db7b701b7469a94f, type: 3}
 --- !u!1 &2078483191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7602474407467630987, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
@@ -2158,6 +2203,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 348815257}
+  - {fileID: 2005246124}
   - {fileID: 1697712672}
   - {fileID: 790621465}
   - {fileID: 705055112}
