@@ -6,6 +6,7 @@ namespace SuperPhage
     public class RandomAreaSpawner : SingletonBase<RandomAreaSpawner>
     {
         [SerializeField] private GameObject spawnPrefab;
+        [SerializeField] private Transform parent;
         [SerializeField] private Vector2 areaSize = new Vector2(10f, 6f);
         [SerializeField] private float minDistance = 1.0f;
         [SerializeField] private int maxSpawnCount = 10;
@@ -14,6 +15,18 @@ namespace SuperPhage
         [SerializeField] private LayerMask blockingLayer;
 
         private int currentSpawnCount = 0;
+
+        protected override void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
 
         private void Start ()
         {
@@ -36,7 +49,8 @@ namespace SuperPhage
             if (TryGetSapwnPosition(out Vector2 spawnPoint) == false) return;
             if (currentSpawnCount >= maxSpawnCount) return;
 
-            Instantiate(spawnPrefab, spawnPoint, Quaternion.identity);
+            GameObject spawnedObject = Instantiate(spawnPrefab, spawnPoint, Quaternion.identity);
+            spawnedObject.transform.SetParent(parent);
             currentSpawnCount += 1;
         }
 
