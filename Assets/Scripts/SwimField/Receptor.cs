@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Receptor : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Receptor : MonoBehaviour
     private bool isBound = false;
 
     private const string PHAGE_LEG_TAG = "PhageLeg";
+    private const string BACTERIA_SCENE_NAME = "BacteriaField";
 
     private void Update()
     {
@@ -18,9 +20,8 @@ public class Receptor : MonoBehaviour
         if (stayingTime >= requiredStayTime)
         {
             isBound = true;
+            SceneManager.LoadScene(BACTERIA_SCENE_NAME);
         }
-
-        if (isBound) Debug.Log("결합 성공");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

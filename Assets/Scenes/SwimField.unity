@@ -2059,7 +2059,7 @@ Transform:
   m_GameObject: {fileID: 1783836532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.001459112, w: 0.999999}
-  m_LocalPosition: {x: -21.13, y: 3.54, z: 0}
+  m_LocalPosition: {x: -1.4, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2336,7 +2336,7 @@ Transform:
   m_GameObject: {fileID: 1801457528}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.11, y: 2.33, z: -10}
+  m_LocalPosition: {x: -1.6, y: -0.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3641,7 +3641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4b1bdf341ba724bbc5556a793a6ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Receptor
-  target: {fileID: 0}
+  requiredStayTime: 3
 --- !u!4 &1945844600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5045136714227892312, guid: 5db33e785656f3446819c5841aab2162, type: 3}
