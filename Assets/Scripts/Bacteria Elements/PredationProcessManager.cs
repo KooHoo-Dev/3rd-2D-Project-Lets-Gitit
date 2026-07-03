@@ -1,12 +1,30 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace SuperPhage
 {
     public class PredationProcessManager : SingletonBase<PredationProcessManager>
     {
-        [SerializeField] int phageThreshold = 5;
+        [SerializeField] private int phageThreshold = 5;
+        [SerializeField] private Button explodeButton;
         private int phageAICount = 0;
         private bool canExplode = false;
+        private const string swimFieldSceneName = "SwimField";
+
+         protected override void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+
+            explodeButton.gameObject.SetActive(false);
+        }
 
         private void Update()
         {
@@ -21,12 +39,17 @@ namespace SuperPhage
 
         private void EnableExplodeButton()
         {
-            Debug.Log("Explode");
+            explodeButton.gameObject.SetActive(true);
         }
 
         public void IncreasePhageCount()
         {
             phageAICount += 1;
+        }
+
+        public void ExplodeButtonPressed()
+        {
+            SceneManager.LoadScene(swimFieldSceneName);
         }
     }
 
