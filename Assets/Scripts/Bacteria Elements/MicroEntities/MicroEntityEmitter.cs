@@ -1,16 +1,29 @@
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace SuperPhage
 {
     public class MicroEntityEmitter : MonoBehaviour
     {
+        [Serializable]
+        private struct EntityParentEntry
+        {
+            public EntityType entityType;
+            public Transform parent;
+        }
+
         [Header("MicroEntity/Settings")]
         [SerializeField] private Transform emitPoint;
         [SerializeField] private float emitSpeed = 3.0f;
         [SerializeField] private float emitDuration = 1.0f;
         [SerializeField] private int maxEntities = 10;
         private int currentEntities = 0;
+
+        [Header("MicroEntity/Hierachy")]
+        [SerializeField] private EntityParentEntry[] entityParents;
 
         protected void Emit(GameObject prefab)
         {
@@ -23,8 +36,12 @@ namespace SuperPhage
             if (currentEntities >= maxEntities) return;
 
             GameObject spawnedObject = Instantiate(prefab, emitPoint.position, Quaternion.identity);
-            
+
             MicroEntity entity = spawnedObject.GetComponent<MicroEntity>();
+            if (TryGetParent(entity.entityType, out Transform parent))
+            {
+                spawnedObject.transform.SetParent(parent);
+            } 
             entity.Init(this);
 
             currentEntities += 1;
@@ -63,6 +80,22 @@ namespace SuperPhage
 
                 yield return null;
             }
+        }
+
+        private bool TryGetParent(EntityType type, out Transform parent)
+        {
+            parent = null;
+
+            foreach (var element in entityParents)
+            {
+                if (element.entityType == type)
+                {
+                    parent = element.parent;
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         protected void SetEmitPoint(Vector3 position)

@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.PhageAI
   <entityType>k__BackingField: 4
+  wanderArea: {x: 30, y: 18}
 --- !u!50 &-4081092172949004019
 Rigidbody2D:
   serializedVersion: 5
@@ -426,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4f71485cc1f524b86b1df4385f8122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.SwimMotor
-  moveSpeed: 5
+  moveSpeed: 2
   rotationSpeed: 180
   backwardMoveSpeed: 2
   backwardRotationSpeed: 50
