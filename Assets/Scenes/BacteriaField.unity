@@ -651,7 +651,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -739,11 +739,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.FreeCamera
   pointActionReference: {fileID: 718986663205449628, guid: c4ffac96f51c1a9439c99e189addf562, type: 3}
-  moveSpeed: 5
-  edgeSize: 32
-  useBounds: 1
-  minPosition: {x: 0, y: 0}
-  maxPosition: {x: 0, y: 0}
+  moveSpeed: 10
+  lerpSpeed: 8
+  edgeSize: 64
+  minPosition: {x: -12, y: -9}
+  maxPosition: {x: 12, y: 9}
 --- !u!1001 &421318861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2478,11 +2478,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6493632722665844458, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8329997
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 6493632722665844458, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.55408
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 6493632722665844458, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: m_LocalPosition.z
