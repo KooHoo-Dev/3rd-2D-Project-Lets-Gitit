@@ -10,7 +10,7 @@ namespace SuperPhage
         private static bool isInitialized = false;
 
         public static bool IsInitialized => isInitialized && instance != null;
-        
+
         public static T Instance
         {
             get
@@ -72,7 +72,8 @@ namespace SuperPhage
                 OnDispose();
                 instance = null;
                 isInitialized = false;
-                applicationIsQuitting = true;
+                // 
+                // applicationIsQuitting = true;
             }
         }
 

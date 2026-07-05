@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SuperPhage
 {
-    public class RandomAreaSpawner : SingletonBase<RandomAreaSpawner>
+    public class RandomAreaSpawner : MonoBehaviour
     {
         [SerializeField] private GameObject spawnPrefab;
         [SerializeField] private Transform parent;
@@ -15,18 +15,6 @@ namespace SuperPhage
         [SerializeField] private LayerMask blockingLayer;
 
         private int currentSpawnCount = 0;
-
-        protected override void Awake()
-        {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else if (instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
 
         private void Start ()
         {
@@ -51,6 +39,12 @@ namespace SuperPhage
 
             GameObject spawnedObject = Instantiate(spawnPrefab, spawnPoint, Quaternion.identity);
             spawnedObject.transform.SetParent(parent);
+
+            if (spawnedObject.TryGetComponent(out MicroEntity entity))
+            {
+                entity.RegisterSpawner(this);
+            }
+
             currentSpawnCount += 1;
         }
 
