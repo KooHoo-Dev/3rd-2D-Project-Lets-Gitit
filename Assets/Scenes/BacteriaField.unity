@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba7c99b0f78fd44cb39d0785ae58314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.PredationProcessManager
-  phageThreshold: 50
+  phageThreshold: 0
   explodeButton: {fileID: 1658594719}
 --- !u!1 &664201935
 GameObject:

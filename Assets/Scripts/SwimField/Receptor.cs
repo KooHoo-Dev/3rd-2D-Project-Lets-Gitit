@@ -1,3 +1,4 @@
+using SuperPhage;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class Receptor : MonoBehaviour
     private float stayingTime = 0f;
     private bool isStaying = false;
     private bool isBound = false;
+    private Transform phageTransform;
 
     private const string PHAGE_LEG_TAG = "PhageLeg";
     private const string BACTERIA_SCENE_NAME = "BacteriaField";
@@ -20,6 +22,15 @@ public class Receptor : MonoBehaviour
         if (stayingTime >= requiredStayTime)
         {
             isBound = true;
+
+            BacteriaIdentity bacteria = GetComponentInParent<BacteriaIdentity>();
+
+            if (bacteria != null && phageTransform != null)
+            {
+                SwimFieldState.Instance.SetCurrentBacteria(bacteria.ID, bacteria.transform.position);
+                SwimFieldState.Instance.SavePhagePosition(phageTransform.position);
+            }
+
             SceneManager.LoadScene(BACTERIA_SCENE_NAME);
         }
     }
@@ -29,6 +40,7 @@ public class Receptor : MonoBehaviour
         if (collision.gameObject.CompareTag(PHAGE_LEG_TAG))
         {
             isStaying = true;
+            phageTransform = collision.transform.root;
         }
     }
 

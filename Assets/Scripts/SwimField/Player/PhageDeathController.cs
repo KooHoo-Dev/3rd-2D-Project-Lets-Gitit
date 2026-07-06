@@ -84,6 +84,11 @@ namespace SuperPhage
                 yield return screenEffectManager.FadeOut(fadeDuration);
             }
 
+            if (SwimFieldState.IsInitialized)
+            {
+                SwimFieldState.Instance.Clear();
+            }
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

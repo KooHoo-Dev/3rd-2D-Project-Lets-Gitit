@@ -40,6 +40,7 @@ namespace SuperPhage
             foreach (Transform bacteria in bacterias)
             {
                 if (bacteria == null) continue;
+                if (bacteria.gameObject.activeInHierarchy == false) continue;
 
                 float sqrDisatance = ((Vector2)bacteria.position - currentPosition).sqrMagnitude;
                 

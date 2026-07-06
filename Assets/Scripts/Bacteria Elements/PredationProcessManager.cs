@@ -49,6 +49,7 @@ namespace SuperPhage
 
         public void ExplodeButtonPressed()
         {
+            SwimFieldState.Instance.MarkCurrentBacteriaDefeated();
             SceneManager.LoadScene(swimFieldSceneName);
         }
     }

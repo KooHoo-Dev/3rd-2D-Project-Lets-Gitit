@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.0990566, b: 0.9862647, a: 1}
+  m_Color: {r: 0.8867924, g: 0.16313636, b: 0.2375547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab43751c28b650e469ab2893fcc32060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.EnergyOrb
+  despawnDistanceFromTarget: 12
+  despawnTarget: {fileID: 0}
   offset: 0.2
   speed: 6
   energyAmount: 5
