@@ -7,12 +7,13 @@ namespace SuperPhage
     public class AntiBodyAI : MonoBehaviour
     {
         [SerializeField] private float detectDistance = 5.0f;
-        [SerializeField] private Transform Target;
+        [SerializeField] private Transform target;
         private SwimMotor swimMotor;
 
         private Coroutine detectRutine;
         private float detectInterval = 0.5f;
-        bool isChasing = false;
+        private bool isChasing = false;
+        private bool isTouchingTarget = false;
 
         private void Awake()
         {
@@ -21,9 +22,15 @@ namespace SuperPhage
 
         private void Update()
         {
+            if (isTouchingTarget)
+            {
+                swimMotor.Brake();
+                return;
+            }
+
             if (isChasing)
             {
-                Vector2 directionToTarget = Target.position - transform.position;
+                Vector2 directionToTarget = target.position - transform.position;
                 swimMotor.SetGoalDirection(directionToTarget.normalized);
             }
             else
@@ -36,10 +43,27 @@ namespace SuperPhage
         {
             while (true) 
             {
-                Vector3 offset = transform.position - Target.transform.position;
+                Vector3 offset = transform.position - target.transform.position;
                 isChasing = offset.sqrMagnitude <= (detectDistance * detectDistance);
                 
                 yield return new WaitForSeconds(detectInterval);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.transform == target || collision.transform.IsChildOf(target))
+            {
+                isTouchingTarget = true;
+                swimMotor.Brake();
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.transform == target || collision.transform.IsChildOf(target))
+            {
+                isTouchingTarget = false;
             }
         }
 

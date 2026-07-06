@@ -27,8 +27,6 @@ namespace SuperPhage
 
         private void Update()
         {
-            // Debug.Log($"currentEnergy : {currentEnergy}");
-
             currentEnergy = Mathf.Clamp(currentEnergy - energyUse * Time.deltaTime, 0f, maxEnergy);
             UpdateEnergyState();
         }
@@ -47,10 +45,10 @@ namespace SuperPhage
                     swimMotor.SetMoveSpeed(5f);
                     break;
                 case EnergyStage.Medium:
-                    swimMotor.SetMoveSpeed(4f);
+                    swimMotor.SetMoveSpeed(3f);
                     break;
                 case EnergyStage.Low:
-                    swimMotor.SetMoveSpeed(3f);
+                    swimMotor.SetMoveSpeed(2f);
                     break;
             }
         }
