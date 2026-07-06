@@ -52,7 +52,7 @@ namespace SuperPhage
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.transform == target || collision.transform.IsChildOf(target))
+            if (IsTarget(collision) == false)
             {
                 isTouchingTarget = true;
                 swimMotor.Brake();
@@ -61,10 +61,21 @@ namespace SuperPhage
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.transform == target || collision.transform.IsChildOf(target))
+            if (IsTarget(collision) == false)
             {
                 isTouchingTarget = false;
             }
+        }
+
+        private bool IsTarget(Collider2D collision)
+        {
+            if (target == null) return false;
+            if (collision == null) return false;
+
+            Transform other = collision.transform;
+            if (other == null) return false;
+
+            return other == target || other.IsChildOf(target);
         }
 
         private void OnEnable()

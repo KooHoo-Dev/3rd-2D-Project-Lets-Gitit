@@ -841,17 +841,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85825ad8c85785b4b9511272480beeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.Ribosome
-  emitPrefabs: []
   emitPoint: {fileID: 6493632722665844458}
   emitSpeed: 3
   emitDuration: 1
-  maxEntities: 10
+  maxEntities: 30
+  entityParents: []
   PhagePrefab: {fileID: 4002249867606524216, guid: 92edae218a3859c42a9ab426dd47a810, type: 3}
   NucleasePrefab: {fileID: 8668290320580041454, guid: 718aeea1ddaf3b741b9b75d643d772ca, type: 3}
   ProduceInterval: 3
-  RequiredAminoAcidForNuclease: 3
-  RequiredAminoAcidForPhage: 3
-  RequiredAGTCForPhage: 3
+  RequiredAminoAcidForNuclease: 1
+  RequiredAminoAcidForPhage: 1
+  RequiredAGTCForPhage: 1
   mRNA: {fileID: 6503221608878230406}
   <aminoAcidCount>k__BackingField: 0
   <AGTCCount>k__BackingField: 0

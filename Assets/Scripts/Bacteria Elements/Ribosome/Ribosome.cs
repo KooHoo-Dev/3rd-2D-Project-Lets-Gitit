@@ -69,7 +69,11 @@ namespace SuperPhage
             {
                 aminoAcidCount -= RequiredAminoAcidForNuclease;
                 view.RefreshAminoCount(aminoAcidCount);
-                base.Emit(NucleasePrefab);
+                for (int i = 0; i < 2; i++)
+                {
+                    base.Emit(NucleasePrefab);
+                }
+                
             }
 
             if (FactoryType == RibosomeFactoryType.Phage)
@@ -78,7 +82,11 @@ namespace SuperPhage
                 AGTCCount -= RequiredAGTCForPhage;
                 view.RefreshAminoCount(aminoAcidCount);
                 view.RefreshAGTCCount(AGTCCount);
-                base.Emit(PhagePrefab);
+                for (int i = 0; i < 3; i++)
+                {
+                    base.Emit(PhagePrefab);
+                }
+                
             }
         }
 
