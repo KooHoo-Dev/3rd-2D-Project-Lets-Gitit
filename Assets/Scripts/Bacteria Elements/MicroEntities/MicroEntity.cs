@@ -30,13 +30,15 @@ namespace SuperPhage
 
         private void OnDestroy()
         {
-            if (emitter == null || spawner == null)
+            if (emitter != null)
             {
-                return;
+                emitter.DecreaseCount();
             }
 
-            emitter.DecreaseCount();
-            spawner.DecreaseCount();
+            if (spawner != null)
+            {
+                spawner.DecreaseCount();
+            }
         }
     }
 }
