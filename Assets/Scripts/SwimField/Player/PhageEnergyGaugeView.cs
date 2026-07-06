@@ -19,7 +19,6 @@ namespace SuperPhage
         {
             if (phageEnergy == null) return;
 
-            Debug.Log($"{phageEnergy.EnergyRatio}");
             RefreshDelta(phageEnergy.EnergyRatio);
         }
 
