@@ -172,8 +172,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1922146510}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -270,8 +278,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 430842408}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -544,8 +560,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 277502801}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -653,8 +677,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1346008494}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -944,8 +976,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 163597842}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -1103,10 +1143,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Destroy
+  m_text: "\uD3EC\uC2DD\uD558\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d61a4c27c6eda144f94d88d6129d11e1, type: 2}
+  m_sharedMaterial: {fileID: 63903142647844343, guid: d61a4c27c6eda144f94d88d6129d11e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1136,7 +1176,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1282,8 +1322,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 860476686}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -1382,7 +1430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba7c99b0f78fd44cb39d0785ae58314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.PredationProcessManager
-  phageThreshold: 30
+  phageThreshold: 90
   explodeButton: {fileID: 1658594719}
 --- !u!1 &664201935
 GameObject:
@@ -2023,8 +2071,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1924774469}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -2231,8 +2287,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1358246081}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -2637,8 +2701,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1742106069}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -3043,8 +3115,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1280564128}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -3199,8 +3279,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 563465250}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAGTCForPhage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: entityParents.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
+      propertyPath: StartingAminoAcidForPhage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7304964561719493831, guid: 28c218bd2db560940b5c563caaec07cb, type: 3}
       propertyPath: <AGTCCount>k__BackingField
@@ -3294,9 +3382,9 @@ MonoBehaviour:
   parent: {fileID: 987427461}
   areaSize: {x: 30, y: 18}
   minDistance: 1
-  maxSpawnCount: 10
+  maxSpawnCount: 50
   maxAttemps: 30
-  spawnInterval: 1
+  spawnInterval: 0.5
   blockingLayer:
     serializedVersion: 2
     m_Bits: 64
