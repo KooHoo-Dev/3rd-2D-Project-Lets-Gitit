@@ -17,7 +17,6 @@ namespace SuperPhage
                 Destroy(gameObject);
             }
         }
-
     }
 }
 
