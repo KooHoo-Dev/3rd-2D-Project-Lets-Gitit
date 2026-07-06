@@ -13,10 +13,12 @@ namespace SuperPhage
     public class PhageEnergy : MonoBehaviour
     {
         [SerializeField] private float energyUse = 1f;
-        private SwimMotor swimMotor;
+        [SerializeField] private float currentEnergy = 100f;
         private float maxEnergy = 100f;
-        private float currentEnergy = 100f;
+        private SwimMotor swimMotor;
         private EnergyStage currentStage = EnergyStage.High;
+
+        public float EnergyRatio => ((maxEnergy <= 0f) ? 0f : currentEnergy / maxEnergy);
 
         private void Awake()
         {
@@ -25,8 +27,6 @@ namespace SuperPhage
 
         private void Update()
         {
-            // Debug.Log($"currentEnergy : {currentEnergy}");
-
             currentEnergy = Mathf.Clamp(currentEnergy - energyUse * Time.deltaTime, 0f, maxEnergy);
             UpdateEnergyState();
         }
@@ -45,10 +45,10 @@ namespace SuperPhage
                     swimMotor.SetMoveSpeed(5f);
                     break;
                 case EnergyStage.Medium:
-                    swimMotor.SetMoveSpeed(4f);
+                    swimMotor.SetMoveSpeed(3f);
                     break;
                 case EnergyStage.Low:
-                    swimMotor.SetMoveSpeed(3f);
+                    swimMotor.SetMoveSpeed(2f);
                     break;
             }
         }
@@ -69,7 +69,7 @@ namespace SuperPhage
 
         public void GainEnergy(float energyAmount)
         {
-            currentEnergy += energyAmount;
+            currentEnergy = Mathf.Clamp(currentEnergy + energyAmount, 0f, maxEnergy);
         }
     }
 

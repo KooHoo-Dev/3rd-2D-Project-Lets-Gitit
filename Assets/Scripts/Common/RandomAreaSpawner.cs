@@ -3,8 +3,16 @@ using UnityEngine;
 
 namespace SuperPhage
 {
-    public class RandomAreaSpawner : SingletonBase<RandomAreaSpawner>
+    public enum SpawnCenter
     {
+        SpawnerPosition,
+        TargetPosition
+    }
+
+    public class RandomAreaSpawner : MonoBehaviour
+    {
+        [SerializeField] private SpawnCenter center;
+        [SerializeField] private Transform spawnTarget;
         [SerializeField] private GameObject spawnPrefab;
         [SerializeField] private Transform parent;
         [SerializeField] private Vector2 areaSize = new Vector2(10f, 6f);
@@ -15,18 +23,6 @@ namespace SuperPhage
         [SerializeField] private LayerMask blockingLayer;
 
         private int currentSpawnCount = 0;
-
-        protected override void Awake()
-        {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else if (instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
 
         private void Start ()
         {
@@ -51,6 +47,18 @@ namespace SuperPhage
 
             GameObject spawnedObject = Instantiate(spawnPrefab, spawnPoint, Quaternion.identity);
             spawnedObject.transform.SetParent(parent);
+
+            if (spawnedObject.TryGetComponent(out MicroEntity entity))
+            {
+                entity.RegisterSpawner(this);
+            }
+
+            if (spawnedObject.TryGetComponent(out EnergyOrb orb))
+            {
+                orb.RegisterSpawner(this);
+                orb.SetDespawnTarget(spawnTarget);
+            }
+
             currentSpawnCount += 1;
         }
 
@@ -73,12 +81,22 @@ namespace SuperPhage
 
         private Vector2 GetRandomPointInArea()
         {
+            Vector2 center = GetSpawnCenter();
+
             float x = Random.Range(-areaSize.x * 0.5f, areaSize.x * 0.5f);
             float y = Random.Range(-areaSize.y * 0.5f, areaSize.y * 0.5f);
             
-            Vector2 point = (Vector2)transform.position + new Vector2(x, y);
+            return center + new Vector2(x, y);
+        }
 
-            return point;
+        private Vector2 GetSpawnCenter()
+        {
+            if (center == SpawnCenter.TargetPosition && spawnTarget != null)
+            {
+                return spawnTarget.position;
+            }
+
+            return transform.position;
         }
 
         public void DecreaseCount()

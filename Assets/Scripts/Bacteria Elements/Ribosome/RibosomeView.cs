@@ -66,6 +66,7 @@ namespace SuperPhage
             Gauge.gameObject.SetActive(false);
             AminoAmount.gameObject.SetActive(false);
             AGTCAmount.gameObject.SetActive(false);
+
         }
     }
 
