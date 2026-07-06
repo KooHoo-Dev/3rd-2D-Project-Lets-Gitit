@@ -13,6 +13,7 @@ namespace SuperPhage
         private readonly HashSet<string> defeatedBacteriaIDs = new();
         private readonly List<Vector3> defeatedBacteriaPositions = new();
         public IReadOnlyList<Vector3> DefeatedBacteriaPositions => defeatedBacteriaPositions;
+        public int DefeatedBacteriaCount => defeatedBacteriaIDs.Count;
 
         public Vector3 CurrentBacteriaPosition { get; private set; }
 

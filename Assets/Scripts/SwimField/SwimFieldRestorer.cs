@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace SuperPhage
 {
@@ -10,12 +9,14 @@ namespace SuperPhage
         [SerializeField] private GameObject phageAIPrefab;
         [SerializeField] private Transform phageAIParent;
         [SerializeField] private float spawnRadius = 5f;
+        [SerializeField] private EndingUI endingUI;
 
         private void Start()
         {
             RestorePhagePosition();
             RestoreBacterias();
             SpawnPendingPhageAIs();
+            CheckGameClear();
         }
 
         private void RestorePhagePosition()
@@ -64,16 +65,16 @@ namespace SuperPhage
                     }
                 }
             }
+        }
 
+        private void CheckGameClear()
+        {
+            if (!SwimFieldState.IsInitialized) return;
+            if (endingUI == null) return;
 
-            int spawnCount = SwimFieldState.Instance.ConsumePendingPhageAISpawnCount();
-
-            for (int i = 0; i < spawnCount; i++)
+            if (SwimFieldState.Instance.DefeatedBacteriaCount >= bacterias.Length)
             {
-                Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
-                Vector3 spawnPosition = playerPhage.position + (Vector3)randomOffset;
-
-                
+                endingUI.Show();
             }
         }
     }

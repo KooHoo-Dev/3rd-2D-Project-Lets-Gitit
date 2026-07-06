@@ -17,6 +17,7 @@ namespace SuperPhage
         private float maxEnergy = 100f;
         private SwimMotor swimMotor;
         private EnergyStage currentStage = EnergyStage.High;
+        private bool isMoving = false;
 
         public float EnergyRatio => ((maxEnergy <= 0f) ? 0f : currentEnergy / maxEnergy);
 
