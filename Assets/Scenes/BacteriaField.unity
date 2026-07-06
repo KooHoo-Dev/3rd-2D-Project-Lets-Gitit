@@ -741,7 +741,7 @@ MonoBehaviour:
   pointActionReference: {fileID: 718986663205449628, guid: c4ffac96f51c1a9439c99e189addf562, type: 3}
   moveSpeed: 10
   lerpSpeed: 8
-  edgeSize: 64
+  edgeSize: 32
   minPosition: {x: -12, y: -9}
   maxPosition: {x: 12, y: 9}
 --- !u!1001 &421318861
@@ -2750,6 +2750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dce5f05b87c5604580fc70d4a5f2cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SuperPhage.RandomAreaSpawner
+  center: 0
+  spawnTarget: {fileID: 0}
   spawnPrefab: {fileID: 7633774589275899445, guid: 9a617e9efe6a9504db7b701b7469a94f, type: 3}
   parent: {fileID: 987427461}
   areaSize: {x: 30, y: 18}
