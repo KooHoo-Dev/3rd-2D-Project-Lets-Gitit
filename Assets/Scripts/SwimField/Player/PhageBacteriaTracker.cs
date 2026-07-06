@@ -50,7 +50,6 @@ namespace SuperPhage
 
                     }
             }
-            Debug.Log($"{nearest.gameObject.name} : {nearest.position} ");
 
             return nearest;
         }
