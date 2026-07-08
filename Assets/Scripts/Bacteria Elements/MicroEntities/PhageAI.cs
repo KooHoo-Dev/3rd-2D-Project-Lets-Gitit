@@ -19,6 +19,11 @@ namespace SuperPhage
             swimMotor = GetComponent<SwimMotor>();
         }
 
+        private void Start()
+        {
+            ChangeDirection();
+        }
+
         public override void Init(MicroEntityEmitter emitter)
         {
             base.Init(emitter);
@@ -63,6 +68,11 @@ namespace SuperPhage
         {
             moveDirection = (Vector2.zero - (Vector2)transform.position).normalized;
             changeDirectionTimer = 0f;
+        }
+
+        public void SetWanderArea(Vector2 area)
+        {
+            wanderArea = area;
         }
     }   
 }

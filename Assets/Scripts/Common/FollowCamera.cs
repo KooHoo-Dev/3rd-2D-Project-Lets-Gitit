@@ -23,7 +23,7 @@ namespace Utils
             Cam = Camera.main;
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             switch (State)
             {

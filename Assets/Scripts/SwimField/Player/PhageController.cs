@@ -9,10 +9,12 @@ namespace SuperPhage
         [SerializeField] private InputActionReference moveActionRefence;
         [SerializeField] private InputActionReference backwardActionRefence;
         private SwimMotor swimMotor;
+        private PhageEnergy phageEnergy;
 
         private void Awake()
         {
             swimMotor = GetComponent<SwimMotor>();
+            phageEnergy = GetComponent<PhageEnergy>();
         }
 
         private void Update()

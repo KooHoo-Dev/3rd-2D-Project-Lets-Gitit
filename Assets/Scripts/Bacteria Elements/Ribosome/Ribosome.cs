@@ -18,28 +18,38 @@ namespace SuperPhage
 
         [Header("Ribosome/Settings")]
         [SerializeField] private float ProduceInterval = 3;
+        [SerializeField] private float PhageProduceInterval = 1.2f;
+        [SerializeField] private float MinimumPhageProduceInterval = 0.45f;
+        [SerializeField] private float PhageProduceAcceleration = 0.08f;
         [SerializeField] private int RequiredAminoAcidForNuclease = 3;
         [SerializeField] private int RequiredAminoAcidForPhage = 3;
         [SerializeField] private int RequiredAGTCForPhage = 3;
+        [SerializeField] private int ResourceAmountPerDrop = 3;
+        [SerializeField] private int StartingAminoAcidForPhage = 0;
+        [SerializeField] private int StartingAGTCForPhage = 0;
+        [SerializeField] private int PhageOutputCount = 5;
+        [SerializeField] private int NucleaseOutputCount = 2;
         [SerializeField] private SpriteRenderer mRNA;
-        
-        // serialize for debugging
-        [field: SerializeField] public int aminoAcidCount { get; private set; } = 0;
-        [field: SerializeField] public int AGTCCount { get; private set; } = 0;
-        public float produceTimer { get; private set; } = 0;
-        // serialize for debugging
-        [SerializeField] private RibosomeFactoryType FactoryType = RibosomeFactoryType.None;
         [SerializeField] private RibosomeView view;
+
+        public int aminoAcidCount { get; private set; } = 0;
+        public int AGTCCount { get; private set; } = 0;
+        public float produceTimer { get; private set; } = 0;
+        
+        private RibosomeFactoryType FactoryType = RibosomeFactoryType.None;
+        private int producedPhageCount = 0;
 
         private void Update()
         {
             if (FactoryType == RibosomeFactoryType.None) return;
             if (CanProduce() == false) return;
 
-            produceTimer += Time.deltaTime;
-            view.RefreshGauge(produceTimer / ProduceInterval);
+            float currentProduceInterval = GetCurrentProduceInterval();
 
-            if (produceTimer >= ProduceInterval)
+            produceTimer += Time.deltaTime;
+            view.RefreshGauge(produceTimer / currentProduceInterval);
+
+            if (produceTimer >= currentProduceInterval)
             {
                 produceTimer = 0f;
                 view.RefreshGauge(0f);
@@ -63,13 +73,28 @@ namespace SuperPhage
             return false;
         }
 
+        private float GetCurrentProduceInterval()
+        {
+            if (FactoryType != RibosomeFactoryType.Phage)
+            {
+                return ProduceInterval;
+            }
+
+            float acceleratedInterval = PhageProduceInterval - producedPhageCount * PhageProduceAcceleration;
+            return Mathf.Max(MinimumPhageProduceInterval, acceleratedInterval);
+        }
+
         private void Produce()
         {
             if (FactoryType == RibosomeFactoryType.Nuclease)
             {
                 aminoAcidCount -= RequiredAminoAcidForNuclease;
                 view.RefreshAminoCount(aminoAcidCount);
-                base.Emit(NucleasePrefab);
+                for (int i = 0; i < NucleaseOutputCount; i++)
+                {
+                    base.Emit(NucleasePrefab);
+                }
+                
             }
 
             if (FactoryType == RibosomeFactoryType.Phage)
@@ -78,7 +103,13 @@ namespace SuperPhage
                 AGTCCount -= RequiredAGTCForPhage;
                 view.RefreshAminoCount(aminoAcidCount);
                 view.RefreshAGTCCount(AGTCCount);
-                base.Emit(PhagePrefab);
+                for (int i = 0; i < PhageOutputCount; i++)
+                {
+                    base.Emit(PhagePrefab);
+                }
+
+                producedPhageCount += PhageOutputCount;
+                 
             }
         }
 
@@ -95,6 +126,8 @@ namespace SuperPhage
             {
                 FactoryType = RibosomeFactoryType.Phage;
                 mRNA.color = Color.red;
+                AddAminoAcid(StartingAminoAcidForPhage);
+                AddAGTC(StartingAGTCForPhage);
                 view.PhageFactoryView();
             }
 
@@ -108,13 +141,23 @@ namespace SuperPhage
 
         public void AddAminoAcid()
         {
-            aminoAcidCount += 1;
+            AddAminoAcid(ResourceAmountPerDrop);
+        }
+
+        private void AddAminoAcid(int amount)
+        {
+            aminoAcidCount += amount;
             view.RefreshAminoCount(aminoAcidCount);
         }
 
         public void AddAGTC()
         {
-            AGTCCount += 1;
+            AddAGTC(ResourceAmountPerDrop);
+        }
+
+        private void AddAGTC(int amount)
+        {
+            AGTCCount += amount;
             view.RefreshAGTCCount(AGTCCount);
         }
     }

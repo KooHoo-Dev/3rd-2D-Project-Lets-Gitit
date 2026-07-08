@@ -52,19 +52,28 @@ namespace SuperPhage
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.transform == target || collision.transform.IsChildOf(target))
-            {
-                isTouchingTarget = true;
-                swimMotor.Brake();
-            }
+            if (IsTarget(collision) == false) return;
+            
+            isTouchingTarget = true;
+            swimMotor.Brake();
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.transform == target || collision.transform.IsChildOf(target))
-            {
-                isTouchingTarget = false;
-            }
+            if (IsTarget(collision) == false) return;
+            
+            isTouchingTarget = false;
+        }
+
+        private bool IsTarget(Collider2D collision)
+        {
+            if (target == null) return false;
+            if (collision == null) return false;
+
+            Transform other = collision.transform;
+            if (other == null) return false;
+
+            return other == target || other.IsChildOf(target);
         }
 
         private void OnEnable()
