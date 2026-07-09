@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 0a7c11837536134458078c9d00d5256f
+guid: c21db38ba10315d409d61d98e6ea4581
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1391723676000668711
-    second: AGTC_0
-  - first:
-      213: -2428145750067336558
-    second: AGTC_1
-  - first:
-      213: -4507970007391027411
-    second: AGTC_2
-  - first:
-      213: 4038227235646278940
-    second: AGTC_3
+      213: -1242838986812909154
+    second: Nucleoid_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AGTC_0
+      name: Nucleoid_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 242
-        width: 58
-        height: 63
+        x: 21
+        y: 45
+        width: 1497
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d3ba7ab0ba9face0800000000000000
-      internalID: -1391723676000668711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AGTC_1
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 241
-        width: 55
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29aac502e4e7d4ed0800000000000000
-      internalID: -2428145750067336558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AGTC_2
-      rect:
-        serializedVersion: 2
-        x: 251
-        y: 242
-        width: 50
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2fb75b99297071c0800000000000000
-      internalID: -4507970007391027411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AGTC_3
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 241
-        width: 48
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1d010f764aaa0830800000000000000
-      internalID: 4038227235646278940
+      spriteID: e99920eb68c80cee0800000000000000
+      internalID: -1242838986812909154
       vertices: []
       indices: 
       edges: []
@@ -213,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AGTC_0: -1391723676000668711
-      AGTC_1: -2428145750067336558
-      AGTC_2: -4507970007391027411
-      AGTC_3: 4038227235646278940
+      Nucleoid_0: -1242838986812909154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
