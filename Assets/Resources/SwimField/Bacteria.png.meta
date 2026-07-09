@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7643793887b41ba42acd8d0443f1f23a
+guid: 094eae7c625db2a4480c176a0e47590e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5830000215696393119
-    second: AminoAcid_0
+      213: 7258468774770224089
+    second: Bacteria_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AminoAcid_0
+      name: Bacteria_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 143
-        width: 257
-        height: 212
+        x: 109
+        y: 226
+        width: 1327
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f93c809be4258e050800000000000000
-      internalID: 5830000215696393119
+      spriteID: 9dba175c4e24bb460800000000000000
+      internalID: 7258468774770224089
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AminoAcid_0: 5830000215696393119
+      Bacteria_0: 7258468774770224089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

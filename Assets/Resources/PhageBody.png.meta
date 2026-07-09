@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be3911b840bbb5348affa5c29a973bbf
+guid: 76cccfc231dfaad469e10b93d0f85a56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3371567932873087129
-    second: suyong_0
+      213: 6562674835017194375
+    second: PhageBody_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suyong_0
+      name: PhageBody_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 1994
-        height: 413
+        x: 28
+        y: 18
+        width: 625
+        height: 598
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 767600114d8c531d0800000000000000
-      internalID: -3371567932873087129
+      spriteID: 78b589dedfd431b50800000000000000
+      internalID: 6562674835017194375
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      suyong_0: -3371567932873087129
+      PhageBody_0: 6562674835017194375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

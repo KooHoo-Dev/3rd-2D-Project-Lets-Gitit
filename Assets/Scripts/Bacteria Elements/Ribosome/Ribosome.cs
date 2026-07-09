@@ -31,6 +31,9 @@ namespace SuperPhage
         [SerializeField] private int NucleaseOutputCount = 2;
         [SerializeField] private SpriteRenderer mRNA;
         [SerializeField] private RibosomeView view;
+        [SerializeField] private Sprite mRNA_phage;
+        [SerializeField] private Sprite mRNA_nuclease;
+
 
         public int aminoAcidCount { get; private set; } = 0;
         public int AGTCCount { get; private set; } = 0;
@@ -38,6 +41,11 @@ namespace SuperPhage
         
         private RibosomeFactoryType FactoryType = RibosomeFactoryType.None;
         private int producedPhageCount = 0;
+
+        private void Awake()
+        {
+            mRNA.gameObject.SetActive(false);
+        }
 
         private void Update()
         {
@@ -115,17 +123,19 @@ namespace SuperPhage
 
         public void SelectFactoryType(RibosomeFactoryType type)
         {
+            mRNA.gameObject.SetActive(true);
+
             if (type == RibosomeFactoryType.Nuclease)
             {
                 FactoryType = RibosomeFactoryType.Nuclease;
-                mRNA.color = Color.orange;
+                mRNA.sprite = mRNA_nuclease;
                 view.NucleaseFactoryView();
             }
 
             if (type == RibosomeFactoryType.Phage)
             {
                 FactoryType = RibosomeFactoryType.Phage;
-                mRNA.color = Color.red;
+                mRNA.sprite = mRNA_phage;
                 AddAminoAcid(StartingAminoAcidForPhage);
                 AddAGTC(StartingAGTCForPhage);
                 view.PhageFactoryView();
@@ -133,6 +143,7 @@ namespace SuperPhage
 
             if (type == RibosomeFactoryType.None)
             {
+                mRNA.gameObject.SetActive(false);
                 FactoryType = RibosomeFactoryType.None;
                 mRNA.color = Color.white;
                 view.EraseView();

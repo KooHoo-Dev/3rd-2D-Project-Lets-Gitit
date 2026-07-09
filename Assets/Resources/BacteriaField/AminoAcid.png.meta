@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3621d8083a722f540a5d643ef7aabe8c
+guid: a8ec179a5b07b594fa421baf41689b12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 714801960251093067
-    second: Ribosome_0
+      213: 5830000215696393119
+    second: AminoAcid_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ribosome_0
+      name: AminoAcid_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 12
-        width: 248
-        height: 286
+        x: 193
+        y: 267
+        width: 849
+        height: 707
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b40f48d789c7be900800000000000000
-      internalID: 714801960251093067
+      spriteID: f93c809be4258e050800000000000000
+      internalID: 5830000215696393119
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ribosome_0: 714801960251093067
+      AminoAcid_0: 5830000215696393119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
