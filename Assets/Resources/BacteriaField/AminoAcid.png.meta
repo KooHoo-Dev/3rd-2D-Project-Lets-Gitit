@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be3911b840bbb5348affa5c29a973bbf
+guid: a8ec179a5b07b594fa421baf41689b12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3371567932873087129
-    second: suyong_0
+      213: 5830000215696393119
+    second: AminoAcid_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suyong_0
+      name: AminoAcid_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 1994
-        height: 413
+        x: 193
+        y: 267
+        width: 849
+        height: 707
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 767600114d8c531d0800000000000000
-      internalID: -3371567932873087129
+      spriteID: f93c809be4258e050800000000000000
+      internalID: 5830000215696393119
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      suyong_0: -3371567932873087129
+      AminoAcid_0: 5830000215696393119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

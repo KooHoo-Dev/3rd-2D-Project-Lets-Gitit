@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7643793887b41ba42acd8d0443f1f23a
+guid: c3cab5cd2e479ba4faa14467c81dd84f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5830000215696393119
-    second: AminoAcid_0
+      213: -3996827446988634900
+    second: mRNA_Polymerase_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AminoAcid_0
+      name: mRNA_Polymerase_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 143
-        width: 257
-        height: 212
+        x: 198
+        y: 167
+        width: 848
+        height: 950
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f93c809be4258e050800000000000000
-      internalID: 5830000215696393119
+      spriteID: ce406b1fc9a6888c0800000000000000
+      internalID: -3996827446988634900
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AminoAcid_0: 5830000215696393119
+      mRNA_Polymerase_0: -3996827446988634900
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

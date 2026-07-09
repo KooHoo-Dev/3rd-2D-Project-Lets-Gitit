@@ -1206,8 +1206,8 @@ Transform:
   m_GameObject: {fileID: 379492958}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1296020651}
@@ -2366,7 +2366,7 @@ Transform:
   m_GameObject: {fileID: 1003724528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.35, z: 0}
+  m_LocalPosition: {x: -0.0020010313, y: -0.6570008, z: 0}
   m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2419,7 +2419,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6562674835017194375, guid: 76cccfc231dfaad469e10b93d0f85a56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2431,8 +2431,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &1003724531
-CircleCollider2D:
+--- !u!61 &1003724531
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2465,8 +2465,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.5}
-  m_Radius: 1.74
+  m_Offset: {x: 0, y: -0.4465425}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.25, y: 5.98}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.25, y: 1.6182978}
+  m_EdgeRadius: 0
 --- !u!4 &1024750008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8132219167167384011, guid: 0a24bc2b596774f4db77844bd19badb0, type: 3}
@@ -2778,13 +2788,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296020650}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.56, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0073240753, w: 0.9999732}
+  m_LocalPosition: {x: -0.03, y: 1.98, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 379492959}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.839}
 --- !u!212 &1296020652
 SpriteRenderer:
   serializedVersion: 2
@@ -2832,7 +2842,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3379720506606652348, guid: e7e6e53293972c54eaa112eb2f3a9087, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3548,8 +3558,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0035664442, y: 0.18668763}
-  m_Size: {x: 0.6098195, y: 1.2713027}
+  m_Offset: {x: 0.0035664442, y: 0.3675109}
+  m_Size: {x: 0.60984063, y: 0.90985703}
   m_Direction: 0
 --- !u!114 &1783836537
 MonoBehaviour:

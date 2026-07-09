@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3621d8083a722f540a5d643ef7aabe8c
+guid: ee32b4dfe5a1078478dc9956e8b4fb4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 714801960251093067
-    second: Ribosome_0
+      213: -8145381518388583373
+    second: suyong 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ribosome_0
+      name: suyong 1_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 12
-        width: 248
-        height: 286
+        x: 53
+        y: 58
+        width: 1433
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b40f48d789c7be900800000000000000
-      internalID: 714801960251093067
+      spriteID: 334aa644aaac5fe80800000000000000
+      internalID: -8145381518388583373
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ribosome_0: 714801960251093067
+      suyong 1_0: -8145381518388583373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
